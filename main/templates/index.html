@@ -8,7 +8,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h3>Master of log</h3>
+  <h3>LOG MASTER</h3>
+  <h3>키워드를 입력하면, 단위시간당 그 키워드가 몇 번 등장했는지 세서 그래프를 그려드려요.</h3>
   <form action="result/" enctype='multipart/form-data' method='POST'>
     {% csrf_token %}
     <label class="custom-file-label" for="customFileLang">Select file</label>
@@ -25,6 +26,8 @@
       <span class="btn-inner--text">이미지 생성하기</span>
     </button>
   </form>
+  <h3>예시 이미지</h3>
+  <img src="{% get_static_prefix %}{{073328}}.png">
 
 </body>
 </html>
