@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>로그 그래프입니다. 이미지가 보이지 않는다면 페이지 배율을 축소해보세요!</h1>
+  <img src="{% get_static_prefix %}{{pltname}}.png">
+</body>
+</html>

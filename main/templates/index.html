@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Master of log</h3>
+  <form action="result/" enctype='multipart/form-data' method='POST'>
+    {% csrf_token %}
+    <label class="custom-file-label" for="customFileLang">Select file</label>
+    <input type="file" name="uploadFile" class="custom-file-input" id="customFileLang" lang="en"><br>
+    search keyword : <input type='text' name='keyword'><br>
+    <p> 단위는? 
+      <select name="unitTime">
+        <option value="millisecond" selected="">100ms</option>
+        <option value="second">1s</option>
+      </select>
+    </p>
+    <button class="btn btn-icon btn-primary" type="submit">
+      <span class="btn-inner--icon"><i class="ni ni-cloud-upload-96"></i></span>
+      <span class="btn-inner--text">이미지 생성하기</span>
+    </button>
+  </form>
+
+</body>
+</html>
